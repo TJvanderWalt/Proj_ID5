@@ -9,7 +9,11 @@ app = Flask(__name__)
 @app.route("/hello")
 # define the view using a function, which returns a string
 def hello_world():
-    return "Hello, World!"
+    return "Hello, Mr. World!"
+# dynamic route
+@app.route("/test/<search_query>")
+def search(search_query):
+return search_query
 # start the flask development server using the run() method
 if __name__ == "__main__":
     app.run()
